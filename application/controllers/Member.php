@@ -60,7 +60,7 @@ class Member extends CI_Controller
                 'nama' => htmlspecialchars($this->input->post('nama', true)),
                 'alamat' => $this->input->post('alamat', true),
                 'email' => htmlspecialchars($email),
-                'image' => 'default.jpeg',
+                'image' => 'default.jpg',
                 'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
                 'role_id' => 2,
                 'is_active' => 1,
@@ -120,8 +120,8 @@ class Member extends CI_Controller
                 $upload_image = $_FILES['image']['name'];
                 if ($upload_image) {
                 $config['upload_path'] = './assets/img/profile/';
-                $config['allowed_types'] = 'gif|jpg|png|jpeg';
-                $config['max_size'] = '3000';
+                $config['allowed_types'] = 'gif|jpg|png';
+                $config['max_size'] = '4000';
                 $config['max_width'] = '1024';
                 $config['max_height'] = '1000';
                 $config['file_name'] = 'pro' . time();
@@ -129,7 +129,7 @@ class Member extends CI_Controller
                 if ($this->upload->do_upload('image')) 
                 {
                     $gambar_lama = $data['user']['image'];
-                if ($gambar_lama != 'default.jpeg') 
+                if ($gambar_lama != 'default.jpg') 
                 {
                     unlink(FCPATH . 'assets/img/profile/' . $gambar_lama);
                 }

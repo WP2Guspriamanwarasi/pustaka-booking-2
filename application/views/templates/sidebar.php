@@ -56,6 +56,27 @@
                 <!-- Divider -->
                 <hr class="sidebar-divider mt-3">
 
+
+                <div class="sidebar-heading">
+                Transaksi
+                </div>
+                <!-- Nav Item - Dashboard -->
+                <li class="nav-item active">
+                    <!-- Nav Item - Dashboard -->
+                <li class="nav-item">
+                    <a class="nav-link pb-0" href="<?= base_url('pinjam'); ?>">
+                        <i class="fa fa-fw fa shooping-cart"></i>
+                        <span>Data peminjaman</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link pb-0" href="<?= base_url('pinjam/daftarBooking'); ?>">
+                        <i class="fa fa-fw fa list"></i>
+                        <span>Data booking</span></a>
+                </li>
+                </li>
+
+                <hr class="sidebar-divider mt-3">
+
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>

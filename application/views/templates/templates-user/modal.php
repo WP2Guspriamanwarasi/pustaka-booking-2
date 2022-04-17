@@ -1,4 +1,4 @@
-//ini view untuk memapilkan halaman login dan masuk
+<!-- ini view untuk memapilkan halaman login dan masuk -->
 <!-- login modal -->
 <div class="modal fade" tabindex="-1" id="loginModal" role="dialog">
     <div class="modal-dialog" role="document">
