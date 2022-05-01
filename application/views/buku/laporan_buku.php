@@ -15,7 +15,7 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">No</th>
                         <th scope="col">Judul</th>
                         <th scope="col">Pengarang</th>
                         <th scope="col">Penerbit</th>

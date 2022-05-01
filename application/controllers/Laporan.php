@@ -57,6 +57,64 @@ class Laporan extends CI_Controller
     }
 
 
+
+
+
+
+    public function laporan_anggota()
+    {
+        $data['judul'] = 'Laporan Data Anggota';
+        $data['user'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
+        $data['anggota'] = $this->db->get('user')->result_array();
+        $this->db->where('role_id',2);
+        
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar');
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('member/laporan-anggota', $data);
+        $this->load->view('templates/footer');
+    }
+    public function laporan_print_anggota()
+    {
+        $data['anggota'] = $this->db->get('user')->result_array();
+
+
+        $this->load->view('member/laporan_print_anggota', $data);
+    }
+
+    public function laporan_anggota_pdf()
+    {
+        {
+            $this->load->library('dompdf_gen');
+            
+            $data['anggota'] = $this->db->get('user')->result_array();
+
+            $this->load->view('member/laporan-pdf-anggota', $data);
+            
+            $paper_size = 'A4'; // ukuran kertas
+            $orientation = 'landscape'; //tipe format kertas potrait atau landscape
+            $html = $this->output->get_output();
+            
+            $this->dompdf->set_paper($paper_size, $orientation);
+            //Convert to PDF
+            $this->dompdf->load_html($html);
+            $this->dompdf->render();
+            $this->dompdf->stream("laporan data anggota.pdf", array('Attachment' => 0));
+            // nama file pdf yang di hasilkan
+        }
+     }
+
+    public function export_excel_anggota()
+    {
+        $data['anggota'] = $this->db->get('user')->result_array();
+        $this->load->view('member/export_excel_anggota', $data);
+    }
+
+
+
+
+
+
     public function laporan_pinjam()
     {
         $data['judul'] = 'Laporan Data Peminjaman';

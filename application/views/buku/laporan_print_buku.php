@@ -16,6 +16,9 @@
     font-family:Verdana;
     padding: 10px 10px 10px 10px;
     }
+    table-data th{
+    background-color:grey;
+    }
     h3{
     font-family:Verdana;
     }
