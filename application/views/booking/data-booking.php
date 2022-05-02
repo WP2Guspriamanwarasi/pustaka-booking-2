@@ -7,12 +7,11 @@
 						<table class="table table-bordered table-striped table-hover" id="table-datatable">
 							<tr>
 								<th>No.</th>
-								<th>ID Booking</th>
-								<th>Tanggal Booking</th>
-								<th>ID User</th>
-								<th>Aksi</th>
-								<th>Denda / Buku /Hari</th>
-								<th>Lama Pinjam</th>
+								<th>Buku</th>
+								<th>Penulis</th>
+								<th>Penerbit</th>
+								<th>tahun</th>
+								<th>Pilihan</th>
 							</tr>
 							<?php
 							$no = 1;

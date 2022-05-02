@@ -4,7 +4,8 @@ class Laporan extends CI_Controller
 {
     function __construct()
     {
-    parent::__construct();
+        parent::__construct();
+        cek_user();
     }
     public function laporan_buku()
     {
