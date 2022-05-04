@@ -139,4 +139,12 @@ class User extends CI_Controller
             }
         }
     }
+
+    public function hapusProfil()
+        {
+            $where = ['id' => $this->uri->segment(3)];
+            $this->ModelUser->hapusProfil($where);
+            redirect('user/anggota');
+        }
+    
 }

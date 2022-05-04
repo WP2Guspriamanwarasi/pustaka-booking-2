@@ -18,6 +18,16 @@ class ModelUser extends CI_Model
         return $this->db->get_where('user', $where);
     }
 
+    public function updateAnggota($data = null, $where = null)
+    {
+        $this->db->update('user', $data, $where);
+    }
+
+    public function hapusAnggota($where = null)
+    {
+        $this->db->delete('user', $where);
+    }
+
     public function cekUserAccess($where = null)
     {
         $this->db->select('*');

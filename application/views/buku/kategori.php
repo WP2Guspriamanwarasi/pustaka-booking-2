@@ -2,15 +2,19 @@
 <div class="container-fluid">
 
     <?= $this->session->flashdata('pesan'); ?>
-    <div class="row">
-        <div class="col-lg-3">
+    <div class="box">
+        <div class="box-header">
+        
+        <div class="col-lg-12">
             <?php if (validation_errors()) { ?>
                 <div class="alert alert-danger" role="alert">
                     <?= validation_errors(); ?>
                 </div>
             <?php } ?>
-            <?= $this->session->flashdata('pesan'); ?>
-            <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#kategoriBaruModal"><i class="fas fa-file-alt"></i> Tambah Kategori</a>
+             <?= $this->session->flashdata('pesan'); ?>
+            <div class="pull-right">
+                <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#kategoriBaruModal"><i class="fas fa-file-alt"></i> Tambah Kategori</a>
+            </div>
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -35,7 +39,9 @@
                     <?php } ?>
                 </tbody>
             </table>
-        </div>
+        </div>  
+        </div>   
+        
     </div>
 
 </div>
