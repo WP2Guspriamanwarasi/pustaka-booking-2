@@ -39,9 +39,9 @@ class Booking extends CI_Controller
 
 		$data['judul'] = "Data Booking";
 		$this->load->view('templates/templates-user/header', $data);
-		$this->load->view('booking/data-booking', $data);
 		$this->load->view('templates/templates-user/modal');
-		$this->load->view('templates/templates-user/footer');
+		$this->load->view('booking/data-booking', $data);
+		$this->load->view('templates/templates-user/footer', $data);
 	}
 
 	public function tambahBooking()

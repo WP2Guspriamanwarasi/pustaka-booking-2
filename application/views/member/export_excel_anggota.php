@@ -1,6 +1,4 @@
 
-<!DOCTYPE html>
-<html>
 <?php 
 header("Content-type: application/vnd-ms-excel");
 header("Content-Disposition: attachment; filename=$title.xls");
@@ -27,9 +25,9 @@ header("Expires: 0");
     font-family:Verdana;
     }
     </style>
-    <h3><center>LAPORAN DATA PEMINJAMAN BUKU</center></h3>
+    <h3><center>LAPORAN DATA ANGGOTA</center></h3>
     <br/>
-    <table class="table-data" border=1>
+    <table class="table-data">
     <thead>
         <tr>
             <th scope="col">No</th>
@@ -37,7 +35,7 @@ header("Expires: 0");
             <th scope="col">Alamat</th>
             <th scope="col">Email</th>
             <th scope="col" nowrap>Member Sejak</th>
-            <th scope="col">Image</th>
+            <!-- <th scope="col">Image</th> -->
             <th scope="col">Role Id</th>
         </tr>
     </thead>
@@ -51,9 +49,9 @@ header("Expires: 0");
         <td><?= $u['alamat']; ?></td>
         <td><?= $u['email']; ?></td>
         <td><?= date('d F Y', $u['tanggal_input']); ?></td>
-        <td>
+        <!-- <td>
             <img src="<?= base_url('assets/img/profile/') . $u['image']; ?>" class="img-fluid img-thumbnail" alt="..." style="width:60px;height:80px;">
-        </td>
+        </td> -->
         <td><?= $u['role_id']; ?></td> 
     </tr>
     <?php 

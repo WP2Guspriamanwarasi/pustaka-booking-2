@@ -69,6 +69,7 @@ class Laporan extends CI_Controller
         $data['anggota'] = $this->db->get('user')->result_array();
         $this->db->where('role_id',2);
         
+        
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar');
         $this->load->view('templates/topbar', $data);
@@ -107,7 +108,9 @@ class Laporan extends CI_Controller
 
     public function export_excel_anggota()
     {
-        $data['anggota'] = $this->db->get('user')->result_array();
+        $data = array('title' => 'Laporan Anggota',
+        'anggota' => $this->ModelUser->getUser()->result_array());
+        // $data['anggota'] = $this->db->get('user')->result_array();
         $this->load->view('member/export_excel_anggota', $data);
     }
 

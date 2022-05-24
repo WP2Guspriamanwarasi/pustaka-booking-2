@@ -33,7 +33,7 @@
             <th scope="col">Alamat</th>
             <th scope="col">Email</th>
             <th scope="col" nowrap>Member Sejak</th>
-            <th scope="col">Image</th>
+            <!-- <th scope="col">Image</th> -->
             <th scope="col">Role Id</th>
         </tr>
     </thead>
@@ -47,9 +47,9 @@
         <td><?= $u['alamat']; ?></td>
         <td><?= $u['email']; ?></td>
         <td><?= date('d F Y', $u['tanggal_input']); ?></td>
-        <td>
+        <!-- <td>
             <img src="<?= base_url('assets/img/profile/') . $u['image']; ?>" class="img-fluid img-thumbnail" alt="..." style="width:60px;height:80px;">
-        </td>
+        </td> -->
         <td><?= $u['role_id']; ?></td> 
     </tr>
     <?php } ?>
